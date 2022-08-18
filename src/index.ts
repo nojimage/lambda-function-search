@@ -172,7 +172,7 @@ class LambdaFunctionSearch extends Command {
       this.log(`=== ${chalk.green('Matched Functions')}: ${result.length} / ${this.amount} ===`)
       if (props.region) this.log(`${chalk.green('Region')} : ${props.region}`)
       result.forEach(item => {
-        this.log(item.FunctionName)
+        this.log(item.FunctionName, item.Runtime, item.Description)
         if (flags.showAll) console.log(item)
       })
     } catch (e) {
